@@ -2,4 +2,22 @@
 
 .component {
   padding: $base-size;
+  margin: 60px auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar {
+  width: 250px;
+  margin: 30px auto;
+}
+
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+    .button {
+    margin: 20px;
+  }
 }
