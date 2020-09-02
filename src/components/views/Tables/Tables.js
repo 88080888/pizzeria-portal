@@ -14,7 +14,7 @@ const demoContent = [
 
   {id: 1,
     time: '12:00-12.30',
-    table1: ['booked', '11111111'],
+    table1: ['booked', '11111122222'],
     table2: ['free', ''],
     table3: ['free', ''],
     table4: ['free', ''],
@@ -169,13 +169,13 @@ const renderActions = ([status, content]) => {
     case 'booked':
       return (
         <>
-          <Button className={styles.button} variant="contained" href={`${process.env.PUBLIC_URL}/tables/booking/123456`}>{content}</Button>
+          <Button className={styles.button} variant="contained" href={`${process.env.PUBLIC_URL}/tables/booking/${content}`}>{content}</Button>
         </>
       );
     case 'event':
       return (
         <>
-          <Button className={styles.button} variant="contained" href={`${process.env.PUBLIC_URL}/tables/events/234567`}>{content}</Button>
+          <Button className={styles.button} variant="contained" href={`${process.env.PUBLIC_URL}/tables/events/${content}`}>{content}</Button>
         </>
       );
     default:
@@ -195,7 +195,7 @@ const Tables = () => (
           id="date"
           label="Date"
           type="date"
-          defaultValue="2020-03-05"
+          defaultValue="2020-09-10"
           InputLabelProps={{
             shrink: true,
           }}
