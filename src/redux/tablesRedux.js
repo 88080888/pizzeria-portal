@@ -42,7 +42,12 @@ export const fetchUpdate = (id, status) => {
     dispatch(fetchStarted());
 
     Axios
-      .get(`${api.url}/api/${api.tables}`)
+      .post(`${api.url}/api/${api.tables}`, {
+        id: id,
+        status: status,
+      }, {headers: {
+        'Content-Type': 'application/json',
+      }},)
       .then( () => {
         dispatch(statusUpdate(id, status));
       })
